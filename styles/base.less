@@ -59,6 +59,7 @@ atom-text-editor {
 
   .syntax--keyword.syntax--control {
     color: @pink;
+    // não
   }
 
   .syntax--support.syntax--type {
@@ -74,13 +75,16 @@ atom-text-editor {
 
 .syntax--keyword {
   color: @pink;
+  // não
 
   &.syntax--control {
     color: @pink;
+    // não
   }
 
   &.syntax--operator {
     color: @pink;
+    // não
   }
 
   &.syntax--setter {
@@ -98,17 +102,12 @@ atom-text-editor {
   }
 
   &.syntax--other.syntax--unit {
-    color: @orange;
+    color: @pink;
   }
 }
 
 .syntax--storage {
   color: @pink;
-
-  // &.syntax--type {
-  //   color: @cyan;
-  //   font-style: italic;
-  // }
 }
 
 .syntax--constant {
@@ -188,23 +187,35 @@ atom-text-editor {
 }
 
 .syntax--punctuation {
-  color: @pink;
+  color: @foreground;
 
-  &.syntax--bracket {
+  &.syntax--scss,
+  &.syntax--separator {
+    color: @pink;
+  }
+
+  &.syntax--property-list {
     color: @foreground;
+  }
+  
+  &.syntax--string {
+    color: @yellow;
   }
 
   &.syntax--definition {
+    &.syntax--css {
+      color: @green;
+    }
+    
     &.syntax--bracket,
     &.syntax--curly {
-      color: @foreground;
+      color: @pink;
     }
 
     &.syntax--comment {
       color: @comment;
     }
 
-    &.syntax--string,
     &.syntax--variable,
     &.syntax--parameters,
     &.syntax--array {
@@ -307,9 +318,10 @@ atom-text-editor {
 
   &.syntax--other.syntax--attribute-name {
     color: @green;
+    font-style: italic;
 
     &.syntax--id {
-      color: @blue;
+      color: @green;
     }
   }
 }
@@ -320,7 +332,7 @@ atom-text-editor {
   }
 
   &.syntax--link {
-    color: @orange;
+    color: @pink;
   }
 
   &.syntax--require {
